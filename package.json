@@ -1,0 +1,34 @@
+{
+  "name": "flexbox-css",
+  "version": "1.0.0",
+  "description": "CSS flexbox project following the Udemy Tutorial from @jonasschmedtman",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --out-dir build/ --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvestrevivo/flexbox-css.git"
+  },
+  "keywords": [
+    "flexbox",
+    "pure",
+    "css",
+    "tutorial",
+    "udemy"
+  ],
+  "author": "@silvestrevivo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/silvestrevivo/flexbox-css/issues"
+  },
+  "homepage": "https://github.com/silvestrevivo/flexbox-css#readme",
+  "dependencies": {
+    "node-sass": "^4.7.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.0.0",
+    "postcss-modules": "^1.1.0"
+  }
+}
