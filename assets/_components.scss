@@ -195,7 +195,7 @@
 .overview{
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--col-grey-light-2);
+  border-bottom: var(--line);
 
   &__heading{
     font-size: 2.5rem;
@@ -262,16 +262,24 @@
   cursor: pointer;
   transition: all .2s ease-in-out;
 
-
   &:hover{
     color: var(--col-grey-dark-1);
     animation-name: pulsate;
     animation-duration: 1s;
     animation-iteration-count: infinite;
+
+    & span{
+      margin-left: 8px;
+      transition: margin-left .2s ease-in-out;
+    }
   }
 
   &:focus{
     outline: none;
+  }
+
+  & span{
+    margin-left: 3px;
   }
 }
 
@@ -292,4 +300,138 @@
     box-shadow: none;
   }
 
+}
+
+
+/////  paragraph //////
+.paragraph{
+
+  &:not(:last-of-type){
+    margin-bottom: 2rem;
+  }
+}
+
+
+/////  list  //////
+.list{
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item{
+    flex: 0 0 50%;
+    margin-bottom: .7rem;
+
+    &:before{
+      content: '';
+      display: inline-block;
+      height: 1rem;
+      width: 1rem;
+      margin-right: .7rem;
+
+      //older browsers
+      //background-image: url('../img/chevron-thin-right.svg');
+      //background-size: cover;
+
+      //newer browsers => masks
+      background-color: var(--col-primary);
+      mask-image: url('../img/chevron-thin-right.svg');
+      mask-size: cover;
+    }
+  }
+
+}
+
+
+/////  recomend //////
+.recommend{
+  font-size: 1.3rem;
+  color: var(--col-grey-dark-3);
+  display: flex;
+  align-items: center;
+
+  &__count{
+    margin-right: auto;
+  }
+
+  &__friends{
+    //....
+  }
+
+  &__foto{
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px solid #fff;
+
+    &:not(:last-child){
+      margin-right: -1.5rem;
+    }
+  }
+}
+
+/////  review  //////
+.review{
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+
+  &__text{
+    margin-bottom: 2rem;
+    z-index: 10;
+    position: relative;
+  }
+
+  &__user{
+    display: flex;
+    align-items: center;
+  }
+
+  &__photo{
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+  }
+
+  &__user-box{
+    margin-right: auto;
+  }
+
+  &__user-name{
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: .4rem;
+  }
+
+  &__user-date{
+    font-size: 1rem;
+    color: var(--col-grey-dark-3);
+  }
+
+  &__rating{
+    font-size: 2.2rem;
+    color: var(--col-primary);
+    font-weight: 300;
+  }
+
+  &::before{
+    content: '\201C';
+    position: absolute;
+    top: -1.5rem;
+    left: -1rem;
+    line-height: 1;
+    font-size: 20rem;
+    color: var(--col-grey-light-3);
+    font-family: sans-serif;
+    z-index: 1;
+  }
 }
