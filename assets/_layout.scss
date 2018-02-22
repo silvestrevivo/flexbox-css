@@ -10,7 +10,7 @@
   height: 7rem;
   font-size: 1.4rem;
   background-color: #fff;
-  border-bottom: var(--col-grey-light-2);
+  border-bottom: 1px solid var(--col-grey-light-2);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,9 +23,13 @@
 .sidebar{
   background-color: var(--col-grey-dark-1);
   flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hotel-view{
   background-color: #fff;
   flex: 1;
+  height: 80rem;
 }
