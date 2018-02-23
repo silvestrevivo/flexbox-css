@@ -1,0 +1,31 @@
+.btn-inline{
+  border: none;
+  color: var(--col-primary);
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+
+  &:hover{
+    color: var(--col-grey-dark-1);
+    animation-name: pulsate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+    & span{
+      margin-left: 8px;
+      transition: margin-left .2s ease-in-out;
+    }
+  }
+
+  &:focus{
+    outline: none;
+  }
+
+  & span{
+    margin-left: 3px;
+  }
+}

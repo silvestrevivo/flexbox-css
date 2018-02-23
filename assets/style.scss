@@ -1,3 +1,51 @@
-@import "base";
-@import "layout";
-@import "components";
+///// General structure => import the files in order ///////
+@import "abstract/_mixins.scss";
+@import "abstract/_variables.scss";
+
+@import 'base/base';
+@import 'base/animations';
+
+@import "components/button-inline.scss";
+@import "components/cta.scss";
+@import "components/gallery-photo.scss";
+@import "components/list.scss";
+@import "components/logo.scss";
+@import "components/overview.scss";
+@import "components/paragraph.scss";
+@import "components/recommend.scss";
+@import "components/review.scss";
+@import "components/search.scss";
+@import "components/side-navigation.scss";
+@import "components/user-navigation.scss";
+
+@import "layout/layout.scss";
+
+//////////////////////////////////////////////////////////////
+//BEM => block, element, modifier
+
+// .block {}
+// standalone component that is meaningful on its own
+// .block__element {}
+// part of block that has no standalone meaning
+// .block__element--modifier {}
+// a different version of a block or an element
+
+// actions are introduced as a class apart to be distinguished
+
+///////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////
+// the 7 - 1 pattern
+
+// 7 different forlders for partials SASS files, ans 1 main file
+// to complile all of them and then be imported.
+
+// abstracts
+// base
+// components
+// layout
+// pages
+// themes
+// vendors
+
+/////////////////////////////////////////////////////////////////

@@ -1,0 +1,16 @@
+/// CSS Variables ////
+:root{
+  --col-primary: #eb2f64;
+  --col-primary-light: #FF3366;
+  --col-primary-dark: #BA265D;
+  --col-grey-light-1: #faf9f9;
+  --col-grey-light-2: #f4f2f2;
+  --col-grey-light-3: #f0eeee;
+  --col-grey-light-4: #ccc;
+  --col-grey-dark-1: #333;
+  --col-grey-dark-2: #777;
+  --col-grey-dark-3: #999;
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+  --shadow-light:  0 2rem 5rem rgba(0,0,0,.1);
+  --line: 1px solid var(--col-grey-light-2);
+}

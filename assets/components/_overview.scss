@@ -1,0 +1,56 @@
+.overview{
+  display: flex;
+  align-items: center;
+  border-bottom: var(--line);
+
+  &__heading{
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
+  }
+
+  &__stars{
+    margin-right: auto;
+    display: flex;
+  }
+
+  &__icon-star,
+  &__icon-location{
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--col-primary);
+  }
+  &__icon-location{
+    margin-right: 1rem;
+  }
+
+  &__location{
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__rating{
+    background-color: var(--col-primary);
+    color: #fff;
+    margin-left: 3rem;
+    align-self: stretch;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__rating-average{
+    font-size: 2.5rem;
+  }
+
+  &__rating-count{
+    font-size: .8rem;
+    text-transform: uppercase;
+    margin-top: -5px;
+  }
+}
