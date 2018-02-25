@@ -3,11 +3,24 @@
   list-style: none;
   margin-top: 3.5rem;
 
+  @include respond(tab-port){
+    display: flex;
+    margin: 0;
+  }
+
   &__item{
     position: relative;
 
+    @include respond(tab-port){
+      flex: 1
+    }
+
     &:not(:last-child){
       margin-bottom: .5rem;
+
+      @include respond(tab-port){
+        margin: 0;
+      }
     }
 
     &:hover::before {
@@ -51,6 +64,16 @@
       align-items: center;
       z-index: 10;
       position: relative;
+
+      @include respond(tab-port){
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      @include respond(phone){
+        flex-direction: column;
+        padding: 1.5rem .5rem;
+      }
     }
   }
 
@@ -59,6 +82,12 @@
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor;
+
+    @include respond(phone){
+      margin: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 
 }
@@ -68,4 +97,7 @@
   text-align: center;
   padding: 1.5rem;
   color: var(--col-grey-light-4);
+  @include respond(tab-port){
+    display: none;
+  }
 }

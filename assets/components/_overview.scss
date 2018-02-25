@@ -9,6 +9,11 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+
+    @include respond(phone){
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+    }
   }
 
   &__stars{
@@ -42,15 +47,27 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+
+    @include respond(phone){
+      padding: 0 1.5rem;
+    }
   }
 
   &__rating-average{
     font-size: 2.5rem;
+
+    @include respond(phone){
+      font-size: 1.8rem;
+    }
   }
 
   &__rating-count{
     font-size: .8rem;
     text-transform: uppercase;
     margin-top: -5px;
+
+    @include respond(phone){
+      font-size: .5rem;
+    }
   }
 }
